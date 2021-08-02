@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="demorounting.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+	<Page id="page" title="Home View">
+		<Table id="idOrdersTable" items="{path: '/Products'}" itemPress="onItemPressed" >
+			<headerToolbar>
+				<OverflowToolbar>
+					<Title text="Product Details" level="H2"/>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column width="12em">
+					<Text text="ID"/>
+				</Column>
+				<Column width="12em">
+					<Text text="Name"/>
+				</Column>
+				<Column width="12em">
+					<Text text="Description"/>
+				</Column>
+				<Column width="12em">
+					<Text text="Release Date"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem press="onItemPressed" type="Navigation">
+					<cells>
+						<Text text="{ID}"/>
+						<Text text="{Name}"/>
+						<Text text="{Description}"/>
+						<Text text="{ReleaseDate}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>			
+	</Page>
+</mvc:View>
